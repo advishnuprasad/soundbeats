@@ -6,7 +6,10 @@ describe "SoundBeats users" do
     it "clicking on Sign Up link at the homepage" do
       visit root_path
       click_link 'Sign Up'
-      fill_in 'Email', :with => 'newuser@examplec.om'
+      save_and_open_page
+
+      fill_in 'Email', :with => 'newuser@example.com'
+
       fill_in 'Password', :with => 'password123'
       fill_in 'Password Confirmation', :with => 'password123'
       click_button 'Sign Up'
