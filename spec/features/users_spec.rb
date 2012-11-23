@@ -19,12 +19,7 @@ describe "SoundBeats users" do
     let(:user) {FactoryGirl.create(:user)}
 
     it "clicking on Sign In link at the homepage" do
-      visit root_path
-      click_link 'Sign In'
-      fill_in 'Email', :with => user.email
-      fill_in 'Password', :with => user.password
-      click_button 'Login'
-
+      sign_in(user,root_path)
       page.should have_content 'Signed in successfully'
     end
 
@@ -34,11 +29,7 @@ describe "SoundBeats users" do
     let(:user) {FactoryGirl.create(:user)}
 
     it "clicking on Sign Out link at the homepage given they are already signed in" do
-      visit root_path
-      click_link 'Sign In'
-      fill_in 'Email', :with => user.email
-      fill_in 'Password', :with => user.password
-      click_button 'Login'
+      sign_in(user,root_path)
       page.should have_content 'Signed in successfully'
 
       click_link 'Sign Out'
