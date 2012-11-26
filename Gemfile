@@ -13,8 +13,12 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
+gem 'therubyracer'
+gem 'execjs'
 gem 'jquery-rails'
 gem 'devise'
+gem 'omniauth'
+gem 'omniauth-facebook'
 
 group :test, :development do
   gem 'rspec-rails'
