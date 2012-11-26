@@ -26,4 +26,6 @@ group :test do
   gem 'capybara'
   gem 'database_cleaner'
   gem 'launchy'
+  gem 'spork', '1.0.0rc3'
+  gem 'guard-spork'
 end
