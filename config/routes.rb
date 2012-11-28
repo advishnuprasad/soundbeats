@@ -3,6 +3,6 @@ Soundbeats::Application.routes.draw do
 
   resources :albums
 
-  
+
   root :to => 'home#index'
 end
