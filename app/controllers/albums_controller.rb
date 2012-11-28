@@ -1,4 +1,5 @@
 class AlbumsController < ApplicationController
+  
   def index
   end
 
@@ -17,7 +18,7 @@ class AlbumsController < ApplicationController
   def update
   end
 
-  def delete
+  def destroy
   end
   
 end

@@ -1,7 +1,7 @@
 Soundbeats::Application.routes.draw do
   devise_for :users
 
-  resource :albums
+  resources :albums
 
   
   root :to => 'home#index'
