@@ -1,5 +1,8 @@
 require 'spec_helper'
 
 describe User do
-  pending "add some examples to (or delete) #{__FILE__}"
+  it "should be invalid without an email" do
+    user = FactoryGirl.build(:user, :email => nil)
+    user.should_not be_valid
+  end
 end
