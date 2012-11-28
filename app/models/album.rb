@@ -4,4 +4,7 @@ class Album < ActiveRecord::Base
 
   has_and_belongs_to_many :artists
 
+  def self.build(params)
+  end
+
 end

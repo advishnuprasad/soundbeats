@@ -3,7 +3,7 @@ describe "SoundBeats users" do
 
   context "can sign up for a new account" do
 
-    it "clicking on Sign Up link at the homepage" do
+    it "clicking on Sign Up link at the homepage and view their albums" do
       visit root_path
       click_link 'Sign Up'
 
@@ -13,18 +13,15 @@ describe "SoundBeats users" do
       find('#user_password_confirmation').set('password123')
 
       click_button 'Sign up'
-
-      page.should have_content 'You have signed up successfully'
       current_path.should eq albums_path
     end
   end
 
-  context "can sign in to their account" do
+  context "can sign in to their account and view their albums" do
     let(:user) {FactoryGirl.create(:user)}
 
     it "clicking on Sign In link at the homepage" do
       sign_in(user,root_path)
-      page.should have_content 'Signed in successfully'
       current_path.should eq albums_path
     end
 
@@ -35,8 +32,6 @@ describe "SoundBeats users" do
 
     it "clicking on Sign Out link at the homepage given they are already signed in" do
       sign_in(user,root_path)
-      page.should have_content 'Signed in successfully'
-
       click_link 'Sign Out'
       page.should have_content 'Signed out successfully'
     end

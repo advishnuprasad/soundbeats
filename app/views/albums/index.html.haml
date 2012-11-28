@@ -1,0 +1,11 @@
+=link_to 'Add Album', new_album_path
+
+%h1 Your Album Collection
+
+%table
+  - @albums.each do |album|
+    %tr
+      %td 
+        =link_to "#{album.name}", album
+      %td 
+        =album.genre

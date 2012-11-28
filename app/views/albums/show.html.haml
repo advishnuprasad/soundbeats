@@ -1,0 +1,12 @@
+%h1 
+  = @album.name
+%p 
+  = @album.genre
+%p
+  =link_to 'Edit Album', edit_album_path(@album)
+
+.alert.alert-error
+  %h4 Danger Zone
+  =link_to 'Delete Album', @album, method: :delete, data: { confirm: 'Are you sure?' }
+
+

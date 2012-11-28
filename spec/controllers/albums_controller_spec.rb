@@ -50,7 +50,7 @@ describe AlbumsController do
 
     it "creates a new album" do
       expect{
-        post :create, :album => FactoryGirl.attributes_for(@album)
+        post :create, :album => FactoryGirl.attributes_for(:album)
       }.to change(Album, :count).by(1)
     end
 
@@ -58,11 +58,11 @@ describe AlbumsController do
 
   describe "PUT //update" do
 
-    it "update an existing album" do
-      post :udpate, :id => @album.id, :album => {:name => "newname", :genre => "newgenre"}
+    it "updates an existing album" do
+      put :update, :id => @album.id, :album => {:name => "newname", :genre => "newgenre"}
       @album.reload
       @album.name.should eq 'newname'
-      @album.name.should eq 'newgenre'
+      @album.genre.should eq 'newgenre'
     end
 
   end

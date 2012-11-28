@@ -34,9 +34,8 @@ describe "Soundbeats registered users" do
 
       page.should have_content 'New album added to your collection'
       within 'h1' do
-        page.should have_content 'Your Album Collection'
+        page.should have_content 'Celebration'
       end
-      page.should have_link 'Celebration'
     end
 
   end
@@ -46,7 +45,7 @@ describe "Soundbeats registered users" do
       album = FactoryGirl.create(:album, :name => 'Ray of Light', :genre => 'Pop')
       visit albums_path
       click_link 'Ray of Light'
-      click link 'Edit Album'
+      click_link 'Edit Album'
       fill_in 'Name', with: 'Ray of Light ( Series 1 )'
       fill_in 'Genre', with: 'Pop Culture'
       click_button 'Save'
@@ -63,7 +62,7 @@ describe "Soundbeats registered users" do
       album = FactoryGirl.create(:album, :name => 'Ray of Light', :genre => 'Pop')
       visit albums_path
       click_link 'Ray of Light'
-      click link 'Delete Album'
+      click_link 'Delete Album'
       current_path.should eq albums_path
       within 'h1' do
         page.should have_content 'Your Album Collection'
