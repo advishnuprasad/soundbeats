@@ -50,7 +50,7 @@ describe AlbumsController do
 
     it "creates a new album" do
       expect{
-        post :create, :album => attributes_for(@album)
+        post :create, :album => FactoryGirl.attributes_for(@album)
       }.to change(Album, :count).by(1)
     end
 

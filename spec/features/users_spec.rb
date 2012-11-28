@@ -12,9 +12,10 @@ describe "SoundBeats users" do
       find('#user_password').set('password123')
       find('#user_password_confirmation').set('password123')
 
-     click_button 'Sign up'
+      click_button 'Sign up'
 
       page.should have_content 'You have signed up successfully'
+      current_path.should eq albums_path
     end
   end
 
@@ -24,6 +25,7 @@ describe "SoundBeats users" do
     it "clicking on Sign In link at the homepage" do
       sign_in(user,root_path)
       page.should have_content 'Signed in successfully'
+      current_path.should eq albums_path
     end
 
   end
