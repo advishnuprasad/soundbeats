@@ -1,3 +1,14 @@
-// Place all the styles related to the Home controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+
+body {
+  background: url('ocean_of_love.jpg') no-repeat;
+}
+
+.homeheader{
+  margin-top: 50px;
+  color: #e5780d;
+  h1 { 
+    font-family: 'Ruge Boogie'; 
+    font-weight: normal; 
+    font-style: italic;
+  }
+}

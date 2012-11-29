@@ -1,5 +1,35 @@
 @import "bootstrap";
 
+.navbar-inner {
+  background-color:#d44413;
+  background-image:-moz-linear-gradient(top, #ce4213, #dd4814);
+  background-image:-webkit-gradient(linear, 0 0, 0 100%, from(#ce4213), to(#dd4814));
+  background-image:-webkit-linear-gradient(top, #ce4213, #dd4814);
+  background-image:-o-linear-gradient(top, #ce4213, #dd4814);
+  background-image:linear-gradient(to bottom, #ce4213, #dd4814);
+  background-repeat:repeat-x;
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffce4213', endColorstr='#ffdd4814', GradientType=0);
+  border:4px solid #912601;
+}
+
+.navbar {
+  .nav > li > a {
+    text-shadow: none;
+    color: #FFFFFF;
+    &:hover { color: #FFFFFF; text-decoration: underline; }
+  }
+
+  .brand {
+    text-shadow: none;
+    color: #FFFFFF;
+  }
+  .navbar-text {
+    color: #ffd2a6;
+  }
+}
+
+
+
 body{
   padding-top: 60px;
 }

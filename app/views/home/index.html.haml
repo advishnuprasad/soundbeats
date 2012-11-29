@@ -1,3 +1,20 @@
 = content_for :head do
+  = stylesheet_link_tag 'http://fonts.googleapis.com/css?family=Ruge+Boogie'
   = stylesheet_link_tag  "home", :media => "all"
+
+.row
+  .homeheader.span8
+    %h1 If music be the food of love, play on!
+  .span4
+    .well.pull-right
+      = form_for :user, :url => user_session_path do |f|
+        .controls
+          / = f.label :email
+          = f.email_field :email, :placeholder => "Email Address"
+        .controls
+          /= f.label :password
+          = f.password_field :password, :placeholder => "Password"
+        .controls
+          = f.submit "Sign in", :class => ["btn", "btn-success"]
+
 
