@@ -15,6 +15,7 @@ end
 
 gem 'jquery-rails'
 gem 'devise'
+gem 'paperclip'
 
 group :test, :development do
   gem 'rspec-rails'
