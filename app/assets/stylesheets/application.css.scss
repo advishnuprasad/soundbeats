@@ -50,3 +50,19 @@ body{
   font-family: 'Cinzel Decorative', Arial;
   font-size: 16px;
 }
+
+#error_explanation{
+  background-color: #f2dede;
+  color: #b94a48;
+  padding: 8px 35px 8px 14px;
+  margin-bottom: 20px;
+  border: 1px solid #eed3d7;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  
+  h2{ 
+    font-size: 14px;
+    margin: 0px;
+  }
+}
