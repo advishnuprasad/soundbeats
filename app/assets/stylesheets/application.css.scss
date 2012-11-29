@@ -1,3 +1,4 @@
+
 @import "bootstrap";
 
 .navbar-inner {
@@ -22,14 +23,30 @@
   .brand {
     text-shadow: none;
     color: #FFFFFF;
+    font-family: 'Snowburst One', Arial, Helvitica, Verdana;
+    font-size: 25px;
   }
   .navbar-text {
     color: #ffd2a6;
   }
 }
 
-
-
 body{
   padding-top: 60px;
+}
+
+.signup{
+  padding-left: 20px;
+  border-left: 1px solid #CCC;
+}
+
+.signup-description{
+  margin-top: 70px;
+  padding-left: 20px;
+  border-left: 1px solid #CCC;
+}
+
+.page-heading{
+  font-family: 'Cinzel Decorative', Arial;
+  font-size: 16px;
 }
