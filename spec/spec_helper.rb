@@ -49,6 +49,8 @@ Spork.prefork do
     #     --seed 1234
     config.order = "random"
     config.include UserMacros
+    config.include Paperclip::Shoulda::Matchers
+
   end
 
 end

@@ -38,6 +38,49 @@ describe "Soundbeats registered users" do
       end
     end
 
+    it "will create a new album with a cover image" do
+      visit albums_path
+      expect{
+        click_link 'Add Album'
+        fill_in 'Name', with: 'Celebration'
+        fill_in 'Genre', with: 'Pop Culture'
+        attach_file('Cover', "#{Rails.root}/spec/fixtures/images/test.png")
+        click_button 'Add Album To Collection'
+      }.to change(Album, :count).by(1)
+
+      page.should have_content 'New album added to your collection'
+      within 'h1' do
+        page.should have_content 'Celebration'
+      end
+    end
+
+    it "will create a new album with different cover image sizes" do
+      visit albums_path
+      expect{
+        click_link 'Add Album'
+        fill_in 'Name', with: 'Celebration'
+        fill_in 'Genre', with: 'Pop Culture'
+        attach_file('Cover', "#{Rails.root}/spec/fixtures/images/test.png")
+        click_button 'Add Album To Collection'
+      }.to change(Album, :count).by(1)
+      page.should have_content 'New album added to your collection'
+      within 'h1' do
+        page.should have_content 'Celebration'
+      end
+
+      within '#album_cover_image' do
+        find('.small_cover').click
+        page.status_code.should be(200)
+
+        find('.medium_cover').click
+        page.status_code.should be(200)
+
+        find('.large_cover').click
+        page.status_code.should be(200)
+      end
+      
+    end
+
   end
 
   context "can edit existing albums in their collection" do

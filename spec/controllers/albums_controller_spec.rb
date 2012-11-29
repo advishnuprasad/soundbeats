@@ -54,13 +54,6 @@ describe AlbumsController do
       }.to change(Album, :count).by(1)
     end
 
-    it "creates a new album with cover image" do
-      new_album = FactoryGirl.create(:album, :cover => File.new(Rails.root + 'spec/support/images/rails.png'))
-      post :create, :album => new_album
-      assigns(:album).should validate_attachment_presence(:cover)
-    end
-
-
   end
 
   describe "PUT //update" do

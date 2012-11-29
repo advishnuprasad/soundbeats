@@ -1,7 +1,18 @@
 %h1 
   = @album.name
 %p 
+  Genre :
   = @album.genre
+%p{:id => "album_cover_image"}
+  =link_to @album.cover.url(:small), :class => 'small_cover'do
+    =image_tag @album.cover.url(:small), :class => 'small'
+
+  =link_to @album.cover.url(:medium), :class => 'medium_cover'do
+    =image_tag @album.cover.url(:medium), :class => 'medium'
+
+  =link_to @album.cover.url(:large), :class => 'large_cover'do
+    =image_tag @album.cover.url(:large)
+
 %p
   =link_to 'Edit Album', edit_album_path(@album)
 
