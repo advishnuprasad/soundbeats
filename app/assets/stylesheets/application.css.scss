@@ -1,6 +1,10 @@
 
 @import "bootstrap";
 
+* {
+  font-family: 'Sanchez', Arial, Helvitica, Verdana;
+}
+
 .navbar-inner {
   background-color:#d44413;
   background-image:-moz-linear-gradient(top, #ce4213, #dd4814);
@@ -11,6 +15,13 @@
   background-repeat:repeat-x;
   filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffce4213', endColorstr='#ffdd4814', GradientType=0);
   border:4px solid #912601;
+}
+
+.nav-list > .active > a,
+.nav-list > .active > a:hover {
+  color: white;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2);
+  background-color: #d44413;
 }
 
 .navbar {
@@ -35,6 +46,13 @@ body{
   padding-top: 60px;
 }
 
+.width3{
+  width: 194px;
+}
+.big-btn{
+  padding: 15px 12px;
+}
+
 .signup{
   padding-left: 20px;
   border-left: 1px solid #CCC;
@@ -51,6 +69,12 @@ body{
   font-size: 16px;
 }
 
+img.small, img.medium, img.large{
+  border: 1px solid #CCCCCC ;
+  padding: 4px;
+  border-width: 1px 2px 2px 1px;
+}
+
 #error_explanation{
   background-color: #f2dede;
   color: #b94a48;
@@ -65,4 +89,12 @@ body{
     font-size: 14px;
     margin: 0px;
   }
+}
+
+.newalbum{
+  margin-bottom: 15px;;
+}
+
+.tiny-details{
+  font-size: 70%;
 }

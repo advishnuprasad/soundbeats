@@ -8,7 +8,7 @@ describe "Soundbeats registered users" do
   context "can view the albums in their collection" do
     it "will show a list of albums of the user" do
       visit albums_path
-      page.should have_content 'Your Album Collection'
+      page.should have_content 'All albums in your collection'
     end
 
     it "will show the details of the album" do
@@ -107,8 +107,8 @@ describe "Soundbeats registered users" do
       click_link 'Ray of Light'
       click_link 'Delete Album'
       current_path.should eq albums_path
-      within 'h1' do
-        page.should have_content 'Your Album Collection'
+      within 'h4' do
+        page.should have_content 'All albums in your collection'
       end
       page.should_not have_content 'Ray of Light'
     end

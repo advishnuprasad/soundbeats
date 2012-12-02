@@ -1,0 +1,16 @@
+.newalbum
+  =link_to new_album_path, :class => ["btn", "btn-warning", "btn-block", "big-btn"] do
+    %i{:class=>"icon-plus-sign"}
+    Add Album
+
+.well{:style => "padding:8px 0px;"}
+  .sidebar-nav
+    %ul{:class => ["nav","nav-list"]}
+      %li
+        %h5 My Collection
+      %li{:class => "active"}
+        = link_to 'All Albums', '#'
+      %li
+        = link_to 'Recent', '#'
+      %li
+        = link_to 'Search', '#'

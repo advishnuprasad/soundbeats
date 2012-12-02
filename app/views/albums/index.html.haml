@@ -1,11 +1,16 @@
-=link_to 'Add Album', new_album_path
+%h4 All albums in your collection
+%table{:class => ["table", "table-striped"]}
 
-%h1 Your Album Collection
-
-%table
   - @albums.each do |album|
     %tr
+      %td{:width => "80px"}
+        =link_to album, :class => 'small_cover'do
+          =image_tag album.cover.url(:small), :class => 'small'
       %td 
         =link_to "#{album.name}", album
-      %td 
-        =album.genre
+      %td
+        %p.detail
+          %span{:class => ["label"]} Genre
+          =album.genre.try(:downcase)
+        %p.tiny-details
+          %i= "Added on #{album.created_at.to_date}"

@@ -13,4 +13,9 @@
     .container
       - flash.each do |name, msg|
         = content_tag :div, msg.html_safe, :id => "flash_#{name}", :class => 'alert' if msg.is_a?(String)
-      = yield
+      .row
+        .span3
+          = render "layouts/albums/sidebar"
+
+        .span9
+          = yield
