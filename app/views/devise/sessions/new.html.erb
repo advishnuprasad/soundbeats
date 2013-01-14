@@ -38,15 +38,5 @@
 
     <% end %>
   </div>
-  <div class="span5" >
-    <div class="signup">
-      <h4>Welcome to <i>SoundBeats</i></h4>
-      <p> SoundBeats is a platform that can maintain your album collection in the cloud securely. </p>
-      <p>Sign up now to get free access! </p>
-      <%- if devise_mapping.registerable? && controller_name != 'registrations' %>
-        <%= link_to "Sign up for FREE", new_registration_path(resource_name), :class => ["btn", "btn-info"]%><br />
-      <% end -%>
-    </div>
-  </div>
 </div>
 

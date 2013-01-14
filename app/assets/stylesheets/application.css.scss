@@ -4,6 +4,14 @@
 * {
   font-family: 'Sanchez', Arial, Helvitica, Verdana;
 }
+.banner_image {
+  background: url('school.jpg');
+  color: white;
+}
+
+.span12 {
+  width: 900px;
+}
 
 .navbar-inner {
   background-color:#d44413;
@@ -34,7 +42,7 @@
   .brand {
     text-shadow: none;
     color: #FFFFFF;
-    font-family: 'Snowburst One', Arial, Helvitica, Verdana;
+    font-family: Arial, Helvitica, Verdana;
     font-size: 25px;
   }
   .navbar-text {

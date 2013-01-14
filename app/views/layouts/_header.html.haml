@@ -1,7 +1,16 @@
 .navbar.navbar-fixed-top
   .navbar-inner
     .container
-      =link_to "SoundBeats", root_url, :class => 'brand'
+      =link_to "TMHSS", root_url, :class => 'brand'
+      %ul.nav
+        %li
+          = link_to 'home', '#'
+        %li
+          = link_to 'Academic', '#'
+        %li
+          = link_to 'About Us', '#'
+        %li
+          = link_to 'Exams', '#'
       %ul.nav.pull-right
         - if current_user
           %li
@@ -10,7 +19,12 @@
           %li
             = link_to "Sign Out", destroy_user_session_path, method: :delete
         - else
-          %li
-            =link_to 'Sign Up', new_user_registration_path, :id => 'signup'
+          / %li
+          /   =link_to 'Sign Up', new_user_registration_path, :id => 'signup'
           %li
             =link_to 'Sign In', new_user_session_path, :id => 'signin'
+.container
+  .row
+    .span12.well.banner_image{:style => 'min-height: 100px;text-align:center'}
+      %h2 Thiagarajar Model higher Secondary School
+      %h4 Education Beyond Tomorrow
