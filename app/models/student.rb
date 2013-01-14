@@ -1,3 +1,5 @@
 class Student < ActiveRecord::Base
-  attr_accessible :address, :class, :name
+  set_primary_key :roll_no
+  attr_accessible :name , :roll_no, :level
+  has_many :results 
 end

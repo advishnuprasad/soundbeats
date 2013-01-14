@@ -1,2 +1,18 @@
-%h1 Student#new
-%p Find me in app/views/student/new.html.haml
+= form_for(@student, :html => { :class => "form-horizontal"}) do |f|
+  %fieldset
+    %legend 
+      New Student Entry
+    .control-group
+      %label.control-label{:for => "Name"} Name
+      .controls
+        = f.text_field :name,  :class => 'input-medium' , :style => 'margin-right:5px'        
+    .control-group
+      %label.control-label{:for => "Name"} Roll No
+      .controls
+        = f.text_field :roll_no,  :class => 'input-medium' , :style => 'margin-right:5px'    
+    .control-group
+      %label.control-label{:for => "Name"} Class
+      .controls
+        = f.text_field :level,  :class => 'input-medium' , :style => 'margin-right:5px'                
+    .controls
+      = f.submit 'Create' , :class => [:btn, :'btn-primary']

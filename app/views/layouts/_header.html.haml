@@ -4,13 +4,15 @@
       =link_to "TMHSS", root_url, :class => 'brand'
       %ul.nav
         %li
-          = link_to 'home', '#'
+          = link_to 'Home', '#'
         %li
           = link_to 'Academic', '#'
         %li
           = link_to 'About Us', '#'
         %li
-          = link_to 'Exams', '#'
+          = link_to 'Students', students_path
+        %li
+          = link_to 'Results', results_path
       %ul.nav.pull-right
         - if current_user
           %li
@@ -21,8 +23,7 @@
         - else
           %li
             =link_to 'Sign In', new_user_session_path, :id => 'signin'
-.container
-  .row
-    .span12.well.banner_image{:style => 'min-height: 100px;text-align:center'}
-      %h2 Thiagarajar Model higher Secondary School
-      %h4 Education Beyond Tomorrow        
+.row
+  .span12.well.banner_image{:style => 'min-height: 100px;text-align:center'}
+    %h2 Thiagarajar Model higher Secondary School
+    %h4 Education Beyond Tomorrow        

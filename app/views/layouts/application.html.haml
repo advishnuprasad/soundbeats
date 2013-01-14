@@ -9,9 +9,12 @@
     = yield :head
 
   %body
-    = render "layouts/header"
     .container
-      - flash.each do |name, msg|
-        = content_tag :div, msg.html_safe, :id => "flash_#{name}", :class => 'alert' if msg.is_a?(String)
-      = yield
-      = render "layouts/footer"
+      #header
+        = render "layouts/header"    
+      #body
+        - flash.each do |name, msg|
+          = content_tag :div, msg.html_safe, :id => "flash_#{name}", :class => 'alert' if msg.is_a?(String)
+        = yield
+      #footer
+        = render "layouts/footer"

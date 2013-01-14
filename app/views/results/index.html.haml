@@ -1,0 +1,30 @@
+/ %span.pull-right
+/   = link_to "Add New Result" , new_result_path
+/ %h4 Results
+/ %table{:class => ["table", "table-striped"]}
+/   %tr
+/     %th
+/       Roll No
+/     %th
+/       Subject
+/     %th
+/       Grade
+/   - @results.each do |r|
+/     %tr
+/       %td 
+/         =link_to "#{r.student_id}", '#'
+/       %td
+/         =link_to "#{r.subject}", '#'
+/       %td
+/         =link_to "#{r.grade}", '#'
+
+= form_for('#' , :html => { :class => "form-horizontal"} , :url => url_for(:action => 'search')) do |f|
+  %div{:style => "float: left; width: 40%; border: 1px solid #fff; margin-right: 5px; padding: 2px;"}
+    %fieldset
+      %legend= 'Select Roll No'
+      .control-group
+        %label.control-label{:for => "no_of_months"} Your Roll No
+        .controls
+          = select_tag(:roll_no, options_for_select(build_roll_nos(@results)))      
+    .controls
+      = f.submit 'Show Result' , :class => [:btn, :'btn-primary']

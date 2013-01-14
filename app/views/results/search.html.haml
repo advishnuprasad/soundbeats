@@ -1,0 +1,19 @@
+%p
+  = "Results For #{@student.name}"
+%table{:class => ["table", "table-striped"]}
+  %tr
+    %th
+      Name
+    %th
+      RollNo
+    %th
+      Class
+  - @results.each do |s|
+    %tr
+      %td 
+        =link_to "#{s.student_id}", '#'
+      %td
+        =link_to "#{s.subject}", '#'
+      %td
+        =link_to "#{s.grade}", '#'
+        
