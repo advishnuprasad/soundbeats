@@ -17,7 +17,8 @@
 /         =link_to "#{r.subject}", '#'
 /       %td
 /         =link_to "#{r.grade}", '#'
-
+%span.pull-right
+  = link_to "Add a result" , new_result_path
 = form_for('#' , :html => { :class => "form-horizontal"} , :url => url_for(:action => 'search')) do |f|
   %div{:style => "float: left; width: 40%; border: 1px solid #fff; margin-right: 5px; padding: 2px;"}
     %fieldset
